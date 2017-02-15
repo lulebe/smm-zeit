@@ -4,7 +4,7 @@ const jsdom = require('jsdom')
 
 module.exports = function (data) {
 
-  const QUERY_URL = 'http://api.zeit.de/content?q=politik'
+  const QUERY_URL = 'http://api.zeit.de/content?limit=20&q=' + data.Content
 
   const feedTemplate = dot.template(`
     <h2>{{=it.title}}</h2>
